@@ -37,6 +37,7 @@ def update_contact(user_id):
     contact = Contact.query.get(user_id)
 
     if not contact:
+        
         return jsonify({"message": "User not found"}), 404
 
     data = request.json
